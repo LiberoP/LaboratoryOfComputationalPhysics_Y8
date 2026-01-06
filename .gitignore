@@ -1,9 +1,16 @@
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+*/data/*
+*solution.ipynb
+
 03ex_Bash_VSCode.ps1
 LCP_22-23_students.csv
 __pycache__/
 anaconda_projects/
-bash_ex1.sh
 data.h5
 data.json
 example.hdf5
