@@ -43,6 +43,7 @@ for (( i=1; i<=18; i++ ));
 do
 newfile_path="$HOME/labcomput/students/students_group_$i.csv"
 for (( j=i; j<=($file_length-1); j+=18 )) # ---> NB the "+="
-do sed -n "${j}p" $noheader_path >> $newfile_path # ---> NB to get j-th line
+do sed -n "${j}p" $noheader_path >> $newfile_path
+# ---> NB to get j-th line ("p" is print command, "${j}" the address where command is executed), "-n" prevents other stuff to be printed
 done
 done

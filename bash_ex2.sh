@@ -3,7 +3,7 @@
 read -p "Please provide number of files to create (and press Enter): " n
 
 # ---> 2a:
-grep -v "^#" "./data/data.csv" | sed -e "s/,//g" > "./data/data.txt"
+grep -v "^#" "./data/data.csv" | sed "s/,//g" > "./data/data.txt"
 # ---> substitute commas with spaces; NB g for global, ie not just first instance
 
 # ---> 2b:
@@ -18,7 +18,8 @@ threshold=$(echo "100 * sqrt(3) / 2" | bc -l)
 #---> need command substitution and bc for calculation; "-l" loads math library
 acc_g=0
 acc_s=0
-while read line; do # ---> NB this syntax
+while read line;
+do # ---> NB this syntax
 X=$(echo $line | awk '{print $1}') # ---> NB this syntax to get a certain column
 Y=$(echo $line | awk '{print $2}')
 Z=$(echo $line | awk '{print $3}')
@@ -30,6 +31,7 @@ else
 (( acc_s++ ))
 fi
 done < "./data/data.txt" # ---> NB this syntax
+
 echo "Occurences greater than threshold: $acc_g; smaller than it: $acc_s"
 
 # ---> 2d:
