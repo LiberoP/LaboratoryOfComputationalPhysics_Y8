@@ -47,3 +47,11 @@ do sed -n "${j}p" $noheader_path >> $newfile_path
 # ---> NB to get j-th line ("p" is print command, "${j}" the address where command is executed), "-n" prevents other stuff to be printed
 done
 done
+
+# the task was the following:
+# Exercise 1:
+# 1\.a Make a new directory called `students` in your home. Download a csv file with the list of students of this lab from [here](https://www.dropbox.com/s/867rtx3az6e9gm8/LCP_22-23_students.csv) (use the `wget` command) and copy that to `students`. First check whether the file is already there
+# 1\.b Make two new files, one containing the students belonging to PoD, the other to Physics.
+# 1\.c For each letter of the alphabet, count the number of students whose surname starts with that letter. 
+# 1\.d Find out which is the letter with most counts.
+# 1\.e Assume an obvious numbering of the students in the file (first line is 1, second line is 2, etc.), group students "modulo 18", i.e. 1,19,37,.. 2,20,38,.. etc. and put each group in a separate file  
